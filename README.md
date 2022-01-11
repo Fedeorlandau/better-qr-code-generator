@@ -12,7 +12,7 @@ steps:
       content: "${{ steps.deploy.outputs.preview_url }}"
   # Use the QR Code in another step, e.g. to embed the image in a slack message
   - name: Do Something
-    run: echo ${{ steps.qrcode.output.QR_DATA }}
+    run: echo ${{ steps.qrcode.outputs.base64 }}
 ```
 
 ### Set up required parameters
@@ -23,8 +23,8 @@ Need to contain the required parameters on the workflow file.
 ### Outputs
 Need to contain the required parameters on the workflow file.
 
-- `QR_DATA` The base64 encoded representation of the QR Code
-- `QR_TEXT` The ascii text representation of the QR Code
+- `base64` The base64 encoded representation of the QR Code
+- `text` The ascii text representation of the QR Code
 
 
 ### Use a text outputted from the other action as input
