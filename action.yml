@@ -6,9 +6,9 @@ inputs:
     description: 'The content to encode to QR code. Must be string.'
     required: true
 outputs: 
-  data: 
+  QR_DATA: 
     description: 'Base64 Data For the Generated QR Code'
-  text: 
+  QR_TEXT: 
     description: 'ASCII Text Representation of the Generated QR COde'
 runs: 
   using: 'node12'
