@@ -6,7 +6,7 @@ inputs:
     description: 'The content to encode to QR code. Must be string.'
     required: true
 outputs: 
-  base64:
+  data:
     description: 'Base64 Data For the Generated QR Code'
   text: 
     description: 'ASCII Text Representation of the Generated QR COde'
