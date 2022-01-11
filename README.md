@@ -4,7 +4,6 @@ A GitHub Action that generates a QR Code and returns base64 Data + Ascii Represe
 ## :arrow_forward: Usage
 ```yml
 steps:
-
   - name: Generate QR Code
     id: qrcode
     uses: fedeorlandau/better-qr-code-generator@main
