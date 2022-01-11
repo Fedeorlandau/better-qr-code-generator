@@ -4,8 +4,8 @@ jobs:
   action-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: fedeorlandau/better-qr-code-generator@main
+      - uses: fedeorlandau/better-qr-code-generator@v7
         id: qrcode
         with:
           content: https://github.com/fedeorlandau
-      - run: echo "${{ steps.qrcode.outputs.QR_TEXT }}"
+      - run: echo ${{ steps.qrcode.outputs.base64 }}

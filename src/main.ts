@@ -8,8 +8,6 @@ export async function run(): Promise<void> {
   const data = await group('Create Base64', () => QRCode.toDataURL(content))
   const text = await group('Create QR Text', () => QRCode.toString(content))
 
-  setOutput('QR_DATA', data)
-  setOutput('QR_TEXT', text)
-
-  info(text)
+  setOutput('base64', data)
+  setOutput('text', text)
 }
